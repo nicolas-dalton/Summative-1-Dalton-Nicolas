@@ -1,11 +1,11 @@
 package com.company.Summative1DaltonNicolas.models;
 
-public class Magic {
+public class Answer {
     private int id;
     private String question;
     private String answer;
     //CONSTRUCTOR
-    public Magic(int id, String question, String answer){
+    public Answer(int id, String question, String answer){
         this.id= id;
         this.question= question;
         this.answer= answer;

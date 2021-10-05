@@ -1,11 +1,11 @@
 package com.company.Summative1DaltonNicolas.models;
 
-public class Word {
+public class Definition {
     private int id;
     private String word;
     private String definition;
     //CONSTRUCTOR
-    public Word(int id, String word, String definition){
+    public Definition(int id, String word, String definition){
         this.id= id;
         this.word= word;
         this.definition= definition;
