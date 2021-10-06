@@ -5,11 +5,7 @@ public class Answer {
     private String question;
     private String answer;
     //CONSTRUCTOR
-    public Answer(int id, String question, String answer){
-        this.id= id;
-        this.question= question;
-        this.answer= answer;
-    }
+
     //GETTERS AND SETTERS
     public int getId(){
         return id;
