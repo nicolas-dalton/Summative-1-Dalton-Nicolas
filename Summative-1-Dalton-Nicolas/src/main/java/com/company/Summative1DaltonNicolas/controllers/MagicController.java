@@ -40,7 +40,7 @@ public class MagicController {
         answers.get(5).setId(idCounter++);
     }
     @RequestMapping(value= "/magic", method= RequestMethod.POST)
-    @ResponseStatus(value= HttpStatus.ACCEPTED)
+    @ResponseStatus(value= HttpStatus.OK)
     public Answer getAnswer(@RequestBody Answer question){
 
         System.out.println(answers.size());

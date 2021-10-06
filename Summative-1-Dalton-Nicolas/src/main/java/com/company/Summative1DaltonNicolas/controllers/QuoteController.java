@@ -22,6 +22,14 @@ public class QuoteController {
         quotes.add(new Quote(idCounter++,"Albert Einstein","Imagination is more important than knowledge."));
         quotes.add(new Quote(idCounter++,"John Lennon","Life is what happens to you while you're busy making other plans."));
         quotes.add(new Quote(idCounter++,"Martin Luther King Jr","Injustice anywhere is a threat to justice everywhere."));
+
+        quotes.add(new Quote(idCounter++,"Bob Ross","We don't make mistakes, just happy little accidents."));
+        quotes.add(new Quote(idCounter++,"Charles V","I speak Spanish to God, Italian to women, French to men, and German to my horse."));
+        quotes.add(new Quote(idCounter++,"Nelson Mandela","It always seems impossible until it's done."));
+        quotes.add(new Quote(idCounter++,"Mahatma Gandhi","When restraint and courtesy are added to strength, the latter becomes irresistible."));
+        quotes.add(new Quote(idCounter++,"George Washington","It is better to offer no excuse than a bad one."));
+
+
     }
     @RequestMapping(value= "/quote", method= RequestMethod.GET)
     @ResponseStatus(value= HttpStatus.OK)
