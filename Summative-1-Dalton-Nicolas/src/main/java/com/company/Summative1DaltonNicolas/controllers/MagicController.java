@@ -14,6 +14,7 @@ public class MagicController {
     private static int idCounter= 1;
 
     public MagicController(){
+        // in-memory DAO
         answers= new ArrayList<>();
         answers.add(new Answer());
         answers.get(0).setAnswer("It is certain.");
@@ -39,12 +40,13 @@ public class MagicController {
         answers.get(5).setAnswer("Don't count on it.");
         answers.get(5).setId(idCounter++);
     }
+    // POST localhost:8080/magic
     @RequestMapping(value= "/magic", method= RequestMethod.POST)
     @ResponseStatus(value= HttpStatus.CREATED)
     public Answer getAnswer(@RequestBody Answer question){
-
-        System.out.println(answers.size());
+        // Creates Random object
         Random rand= new Random();
+        // Generates Random integer
         int index= rand.nextInt(answers.size());
         Answer answer= answers.get(index);
         answer.setQuestion(question.getQuestion());

@@ -16,6 +16,7 @@ public class QuoteController {
     private List<Quote> quotes;
     private static int idCounter= 1;
     public QuoteController(){
+        // in-memory DAO
         quotes= new ArrayList<>();
         quotes.add(new Quote(idCounter++,"Linus Torvalds","Talk is cheap. Show me the code."));
         quotes.add(new Quote(idCounter++,"John F. Kennedy","Every accomplishment starts with the decision to try."));
@@ -34,8 +35,9 @@ public class QuoteController {
     @RequestMapping(value= "/quote", method= RequestMethod.GET)
     @ResponseStatus(value= HttpStatus.OK)
     public Quote getQuote(){
-        System.out.println(quotes.size());
+        // Creates Random object
         Random rand= new Random();
+        // Generates Random integer
         int index= rand.nextInt(quotes.size());
         return quotes.get(index);
     }

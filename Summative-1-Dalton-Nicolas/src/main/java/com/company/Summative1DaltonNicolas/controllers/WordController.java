@@ -16,10 +16,10 @@ public class WordController {
     private List<Definition> words;
     private static int idCounter= 1;
     public WordController(){
+        // in-memory DAO
         words= new ArrayList<>();
         words.add(new Definition(idCounter++, "abate","to become less active, less intense, or less in amount."));
         words.add(new Definition(idCounter++, "bolster","to support, strengthen, or fortify."));
-
         words.add(new Definition(idCounter++, "clout","influence or power, especially in politics or business."));
         words.add(new Definition(idCounter++, "demur","raise doubts or objections or show reluctance."));
         words.add(new Definition(idCounter++, "egregious","outstandingly bad; shocking."));
@@ -33,7 +33,9 @@ public class WordController {
     @RequestMapping(value= "/word", method= RequestMethod.GET)
     @ResponseStatus(value= HttpStatus.OK)
     public Definition getWord(){
+        // Creates Random object
         Random rand= new Random();
+        // generates Random integer
         int index= rand.nextInt(words.size());
         return words.get(index);
     }

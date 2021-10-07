@@ -4,7 +4,6 @@ public class Answer {
     private int id;
     private String question;
     private String answer;
-    //CONSTRUCTOR
 
     //GETTERS AND SETTERS
     public int getId(){
